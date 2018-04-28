@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Cenfo_XamarinLab3_2018.Views.MasterDetailView"
+    Title="Custom Map Points"
+    BackgroundColor="Silver"
+    xmlns:pages="clr-namespace:Cenfo_XamarinLab3_2018.Views" IsPresented="true">
+
+    <MasterDetailPage.Master>
+        <!-- x:Name es requerido en el master del master detail page, error no es descriptivo -->
+        <!-- Title es requerido tambien, sino hay un error en runtime. -->
+        <pages:MainMenuView Padding="0,15,0,0" x:Name="MenuPage"></pages:MainMenuView>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:MapPointsListView />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

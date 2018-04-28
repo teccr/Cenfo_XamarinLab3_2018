@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Cenfo_XamarinLab3_2018.Views.AddMapPointView"
+             Title="Add Point"
+             BackgroundColor="Silver"
+             >
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout 
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand">
+            <Label Text="Latitude" TextColor="Teal" />
+            <Entry Placeholder="Ex: 43.12" Text="{Binding CurrentMapPoint.Latitude}" />
+            <Label Text="Longitude" TextColor="Teal" />
+            <Entry Placeholder="Ex: 45.12" Text="{Binding CurrentMapPoint.Longitude}" />
+            <Label Text="Name" TextColor="Teal" />
+            <Entry Placeholder="Summer Vacation" Text="{Binding CurrentMapPoint.Name}" />
+            <Label Text="Description" TextColor="Teal" />
+            <Entry Placeholder="Ex: My nice summer vacation." Text="{Binding CurrentMapPoint.Description}" />
+            <Button Style="{StaticResource MapPointsButton}" Text="Add Point" Command="{Binding SaveNewPointCommand}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
